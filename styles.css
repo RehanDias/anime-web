@@ -1,0 +1,158 @@
+/* Custom CSS untuk mengganti gaya Bootstrap dan membuat efek Glassmorphism */
+
+/* Navbar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Memastikan navbar muncul di atas konten lain */
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font stack untuk kompatibilitas */
+}
+
+/* Override gaya kartu */
+.card {
+    background-color: rgba(255, 255, 255, 0.2); /* Warna latar belakang semi-transparan */
+    border-radius: 16px; /* Memberi tepi bulat pada kartu */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan kedalaman */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border semi-transparan */
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s; /* Transisi saat kartu dihover */
+    max-width: 250px; /* Lebar maksimum kartu */
+    margin: 10px; /* Margin untuk penempatan yang lebih baik */
+    opacity: 0.8; /* Opasitas awal */
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Font stack untuk kompatibilitas */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Translasi kartu saat dihover */
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.2); /* Shadow yang lebih kuat saat dihover */
+    opacity: 1; /* Kembali ke opasitas penuh saat dihover */
+}
+
+.card-img-top {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+
+.stretched-link::after {
+    display: none;
+}
+/* Custom CSS untuk tombol 'Watch' */
+.button {
+    font-family: "Open Sans", sans-serif; /* Font family */
+    font-size: 16px; /* Font size */
+    letter-spacing: 2px; /* Letter spacing */
+    text-decoration: none; /* Menghapus garis bawah */
+    text-transform: uppercase; /* Huruf kapital */
+    color: #000; /* Warna teks hitam */
+    background-color: #fff; /* Warna latar belakang putih */
+    cursor: pointer; /* Gaya kursor */
+    border: 3px solid; /* Gaya border */
+    padding: 0.25em 0.5em; /* Padding */
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px; /* Bayangan kotak */
+    position: relative; /* Posisi */
+    user-select: none; /* Pemilihan pengguna */
+    -webkit-user-select: none; /* Pemilihan pengguna untuk browser webkit */
+    touch-action: manipulation; /* Aksi sentuh */
+}
+
+/* Hover effect */
+.button:hover {
+    font-family: "Open Sans", sans-serif; /* Font family */
+    font-size: 16px; /* Font size */
+    letter-spacing: 2px; /* Letter spacing */
+    text-decoration: none; /* Menghapus garis bawah */
+    text-transform: uppercase; /* Huruf kapital */
+    color: #000000; /* Warna teks hitam */
+    background-color: #fff; /* Warna latar belakang putih */
+    cursor: pointer; /* Gaya kursor */
+    border: 3px solid; /* Gaya border */
+    padding: 0.25em 0.5em; /* Padding */
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px; /* Bayangan kotak */
+    position: relative; /* Posisi */
+    user-select: none; /* Pemilihan pengguna */
+    -webkit-user-select: none; /* Pemilihan pengguna untuk browser webkit */
+    touch-action: manipulation; /* Aksi sentuh */
+}
+
+/* Active (clicked) state */
+.button:active {
+    transform: translateY(1px); /* Tambahkan translasi Y saat diklik */
+    box-shadow: none; /* Hapus bayangan kotak saat diklik */
+}
+
+/* Focus state */
+.button:focus {
+    outline: none; /* Hapus outline saat fokus */
+}
+@media only screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column; /* Tampilan kolom untuk navbar di layar kecil */
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px; /* Jarak bawah pada merek navbar */
+    }
+
+    .form-inline {
+        width: 100%; /* Lebar penuh pada form pencarian */
+        justify-content: center; /* Posisi form pencarian di tengah */
+        display: flex; /* Tampilan fleksibel untuk mengatur posisi elemen di dalamnya */
+    }
+
+    .form-control {
+        flex: 1; /* Mengatur input pencarian agar mengambil sebanyak mungkin ruang tersedia */
+        margin-right: 10px; /* Jarak kanan input pencarian */
+    }
+
+    .btn {
+        width: auto; /* Mengembalikan lebar tombol pencarian ke otomatis */
+    }
+
+    /* Kartu */
+    .card {
+        width: 90%; /* Mengatur lebar kartu menjadi 90% dari lebar tampilan pada layar kecil */
+        max-width: 400px; /* Maksimum lebar kartu agar tidak terlalu melebar pada layar sangat kecil */
+        margin: 10px auto; /* Mengatur margin agar kartu berada di tengah */
+        border: none; /* Menghapus border kartu */
+        border-radius: 8px; /* Memberikan sudut melengkung pada kartu */
+        overflow: hidden; /* Mengatur overflow untuk gambar dan teks */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk memberikan kedalaman */
+    }
+
+    .card-img-top {
+        height: 150px; /* Ubah tinggi gambar kartu untuk layar kecil */
+        object-fit: cover; /* Mengatur gambar agar terisi penuh pada kotak */
+    }
+
+    .card-body {
+        padding: 1rem; /* Padding pada body kartu */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Ubah ukuran judul kartu untuk layar kecil */
+        margin-bottom: 0.5rem; /* Jarak bawah judul kartu */
+    }
+
+    .card-text {
+        font-size: 0.875rem; /* Ubah ukuran teks kartu untuk layar kecil */
+        color: #6c757d; /* Warna teks */
+    }
+}
